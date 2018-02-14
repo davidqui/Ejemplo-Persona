@@ -1,45 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PROCESO</title>
+        <title>RESULTADO</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
     <body>
-<#if saludo??>
-        <h1>${saludo}</h1>
-<#else>
-        <h3 align="center">No hay saludo</h3>
-</#if>
-
-        <#if valores??>
-        <!--<table border="1">-->
-                <!--<div class=".col-sm-4"</div>-->
-        <div class="col">
-        <!--<table class="table table-hover">-->
-            <#list valores as valor>
-            <tr><td>${valor}</td></tr>
-        </#list>
-            <!--</table>-->
-        <#else>
-            <h4 align="center">Este es el contenido de la Lista</h4>
-        </#if>
-            <!--<table border="1">-->
-    <!--        <table class="table table-hover">
-                <tr><th>DOCID</th><th>NOMBRE</th><th>APELLIDO</th><th>EDAD</th></tr>-->
-            <div class="row">
-                <div class="col">
-                    <hr/>
-                    </div>
-                </div>
-
-            <div class="row">
-                <div class="col">
-                    <h2>Lista de personas registradas </h2>
-                    </div>
-                </div>
 
             <div class="row">
                 <div class="col" </div>
@@ -59,12 +27,12 @@
                     </head>
                     <tbody>
 
-            <#list personas as persona><tr>
+            <p> ${persona}><tr>
                             <th scope="row"style="background-color:lightgray;">${persona.docid}</td>
                             <td>${persona.nombre}</td>
                             <td>${persona.apellido}</td>
                             <td>${persona.edad}</td></tr>
-        </#list>
+       
                     </table>
 
 

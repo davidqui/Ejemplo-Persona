@@ -52,6 +52,11 @@ public class EjemploController {
         return "ejemplo-guardar";
     }
     
+     @RequestMapping(value = "/encontrar", method = RequestMethod.GET)
+    public String encontrarP() {
+        return "ejemplo-findById";
+    }
+    
 //    @RequestMapping(value = "/borrar", method = RequestMethod.GET)
 //    public String borrar() {
 //        return "redirect:/proceso";
@@ -127,12 +132,12 @@ public class EjemploController {
         
     }
     
-//    @RequestMapping("/byId")
-//    public String  encById(String docid, Model model){
-//        personaService.findById(docid);
-//        
-//        return "redirect:/proceso";
-//        
-//    }
+    @RequestMapping("{byId}")
+    public String  encById(@RequestParam(value = "docid") String docid, Model model){
+        model.addAttribute("persona", personaService.findById(docid));
+        
+        return "/ejemplo-byId";
+        
+    }
     
 }
