@@ -8,15 +8,22 @@
 
         </head>
 
-    <body>
+    <body style="background-color:powderblue;">
+        <div class="container">
+        
+        <h1 style="text-align:center;" ><i>Ingrese los datos del usuario a guardar</i></h1>
 
         <form action="/guardar" method="POST" >
            <!--<tr><th>DOCID</th><th>NOMBRE</th><th>APELLIDO</th><th>EDAD</th></tr>-->
-            <p>Ingrese    su    Id: <input title="Se necesita su numero de Documento"type="text" id="docid" name="docid" required/></p>
+            <p style="color:blue;"><b>&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;Ingrese    su    Id: <input title="Se necesita su numero de Documento"type="text" id="docid" name="docid" required/></b></p>
 
-            <p>Ingrese  su  Nombre:<input title="Se necesita un nombre" type="text" id="nombre" name="nombre" required/></p>
-            <p>Ingrese su Apellido:<input title="Se necesita un apellido" type="text" id="apellido" name="apellido" required/></p>
-            <p>Ingrese   su   Edad:<input title="Se necesita su edad verdadera" type="text" id="edad" name="edad" required/></p>
+            <p style="color:blue;" style="font-family:verdana;"><b>
+                Ingrese  su  Nombre:<input title="Se necesita un nombre" type="text" id="nombre" name="nombre" required/></b></p>
+            <p style="color:blue;"><b> Ingrese su Apellido:<input title="Se necesita un apellido" type="text" id="apellido" name="apellido" required/></b></p>
+            <p style="color:blue;"><b> &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;Ingrese   su   Edad:<input title="Se necesita su edad verdadera" type="text" id="edad" name="edad" required/></b></p>
 
             <input type="submit" value="Guardar Persona..."/>
             </form>

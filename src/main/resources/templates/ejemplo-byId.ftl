@@ -8,36 +8,60 @@
 
 
     <body>
+        <div class="container">
+        <div class="row">
+            <div class="col" </div>
+            <!--<div class=".col-sm-4"</div>-->
+                <!--<table class="table table-bordered">-->
+            <!--<table class="table table-hover" >-->
+            <table style="width:60%" class="table table-hover" >
+            <!--<table lass="table-responsive">-->
+                <thead>
+                <style>
+                    table {
+                        font-family: arial, sans-serif;
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
 
-            <div class="row">
-                <div class="col" </div>
-                <!--<div class=".col-sm-4"</div>-->
-                    <!--<table class="table table-bordered">-->
-                <table class="table table-hover" >
-                <!--<table lass="table-responsive">-->
-                    <thead>
-                        <tr>
-                            <th scope="col"style="background-color:lightblue;">Doc. Id.</th>
-                            <th scope="col"style="background-color:lightblue;">Nombre</th>
-                            <th scope="col"style="background-color:lightblue;">Apellido</th>
-                            <th scope="col"style="background-color:lightblue;">Edad</th>
-                            </tr>
-                        </thead>
+                    td, th {
+                        border: 4px solid #dddddd;
+                        text-align: center;
+                        padding: 12px;
+                    }
 
-                    </head>
-                    <tbody>
+                    tr:nth-child(even) {
+                        background-color: #dddddd;
+                    }
+                    </style>
+                <h1>&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;Este es Usuario que usted indico</h1>
+                <tr>
+                    <th scope="col"style="background-color:lightblue;">Doc. Id.</th>
+                    <th scope="col"style="background-color:lightblue;">Nombre</th>
+                    <th scope="col"style="background-color:lightblue;">Apellido</th>
+                    <th scope="col"style="background-color:lightblue;">Edad</th>
+                    </tr>
+                </thead>
 
-            <p> ${persona}><tr>
-                            <th scope="row"style="background-color:lightgray;">${persona.docid}</td>
-                            <td>${persona.nombre}</td>
-                            <td>${persona.apellido}</td>
-                            <td>${persona.edad}</td></tr>
-       
-                    </table>
+                </head>
+                <tbody>
+                    
+
+                <p> ${persona}><tr>
+                    <th scope="row"style="background-color:lightgray;">${persona.docid}</td>
+                    <td>${persona.nombre}</td>
+                    <td>${persona.apellido}</td>
+                    <td>${persona.edad}</td></tr>
+
+                </table>
 
 
-                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-                </body>
-                </html>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            </div>
+            </body>
+    </html>
