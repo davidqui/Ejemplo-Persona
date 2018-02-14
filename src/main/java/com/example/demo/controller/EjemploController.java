@@ -89,7 +89,10 @@ public class EjemploController {
     
     @RequestMapping("/proceso")
 //    @RequestMapping(value = "/proceso", method = RequestMethod.GET)
-    public String procesar(Model model) {
+    public String procesar(String nombre,Model model) {
+        if (nombre != null && !nombre.trim().isEmpty()) {
+            model.addAttribute("saludo", "Hola " + nombre + "!!!"+ "Gracias por loguearte con nosotros");
+        }
         List<Persona> personas = personaService.findAll();
         model.addAttribute("personas", personas);
 
