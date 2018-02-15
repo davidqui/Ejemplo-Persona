@@ -24,7 +24,10 @@
             <p style="color:blue;"><b> Ingrese su Apellido:<input title="Se necesita un apellido" type="text" id="apellido" name="apellido" required/></b></p>
             <p style="color:blue;"><b> &nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;Ingrese   su   Edad:<input title="Se necesita su edad verdadera" type="text" id="edad" name="edad" required/></b></p>
-
+            <p style="color:blue;"><b> &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;Ingrese   su fecha de nacimiento:
+                <input title="Se necesita su fecha de nacimiento" type="date" id="fechanac" name="fechanac" required/></b></p>
+            
             <input type="submit" value="Guardar Persona..."/>
             </form>
 

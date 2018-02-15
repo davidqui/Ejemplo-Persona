@@ -7,6 +7,7 @@ package com.example.demo.entities;
 
 import java.io.Serializable;
 import java.math.BigInteger;
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,8 +15,11 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  *
@@ -25,7 +29,6 @@ import javax.validation.constraints.Size;
 @Table(name = "PERSONA")
 @NamedQueries({
     @NamedQuery(name = "Persona.findAll", query = "SELECT p FROM Persona p")})
-@SuppressWarnings("PersistenceUnitPresent")
 public class Persona implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -43,19 +46,16 @@ public class Persona implements Serializable {
     private String apellido;
     @Column(name = "EDAD")
     private BigInteger edad;
+    @Column(name = "FECHANAC")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
+    private Date fechanac;
 
     public Persona() {
     }
 
     public Persona(String docid) {
         this.docid = docid;
-    }
-
-    public Persona(String docid, String nombre, String apellido, BigInteger edad) {
-        this.docid = docid;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
     }
 
     public String getDocid() {
@@ -90,6 +90,14 @@ public class Persona implements Serializable {
         this.edad = edad;
     }
 
+    public Date getFechanac() {
+        return fechanac;
+    }
+
+    public void setFechanac(Date fechanac) {
+        this.fechanac = fechanac;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -112,7 +120,7 @@ public class Persona implements Serializable {
 
     @Override
     public String toString() {
-        return "com.example.demo.entyti.Persona[ docid=" + docid + " ]";
+        return "com.example.demo.entities.Persona[ docid=" + docid + " ]";
     }
-
+    
 }

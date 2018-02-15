@@ -6,12 +6,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.entities.Persona;
-import com.example.demo.repository.PersonaRepository;
 import com.example.demo.services.PersonaService;
 import java.math.BigInteger;
-import java.util.ArrayList;
+import java.sql.Date;//para poder insertar en la Base de Datos
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -105,13 +103,14 @@ public class EjemploController {
     @RequestMapping(value = "/guardar", method = RequestMethod.POST)
     public String crearPersona(@RequestParam("docid") String docid,
             @RequestParam("nombre") String nombre, @RequestParam("apellido") String apellido,
-            @RequestParam("edad") Integer edad, Model model) {
+            @RequestParam("edad") Integer edad, @RequestParam("fechanac") Date fechanac, Model model) {
         
         Persona per = new Persona();
         per.setDocid(docid);
         per.setNombre(nombre);
         per.setApellido(apellido);
         per.setEdad(BigInteger.valueOf(edad));
+        per.setFechanac(fechanac);
         model.addAttribute("Persona", personaService.save(per));
         
         return "redirect:/proceso";

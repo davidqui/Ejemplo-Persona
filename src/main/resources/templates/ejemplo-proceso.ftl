@@ -58,6 +58,7 @@
                                     <th scope="col"style="background-color:lightblue;">Nombre</th>
                                     <th scope="col"style="background-color:lightblue;">Apellido</th>
                                     <th scope="col"style="background-color:lightblue;">Edad</th>
+                                    <th scope="col"style="background-color:lightblue;">fechanac</th>
                                     </tr>
                             <!--  <tr>
                             
@@ -80,7 +81,8 @@
                                     <th scope="row"style="background-color:lightgray;">${persona.docid}</td>
                                     <td>${persona.nombre}</td>
                                     <td>${persona.apellido}</td>
-                                    <td>${persona.edad}</td></tr>
+                                    <td>${persona.edad}</td>
+                                    <td>${persona.fechanac?date}</td></tr>
         </#list>
                             </table>
 
