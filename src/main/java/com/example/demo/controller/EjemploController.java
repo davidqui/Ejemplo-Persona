@@ -6,12 +6,12 @@
 package com.example.demo.controller;
 
 import com.example.demo.entities.Persona;
-import com.example.demo.repository.PersonaRepository;
 import com.example.demo.services.PersonaService;
 import java.math.BigInteger;
-import java.util.ArrayList;
+import java.sql.Date;
+
+
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -52,6 +52,11 @@ public class EjemploController {
         return "ejemplo-guardar";
     }
     
+     @RequestMapping(value = "/encontrar", method = RequestMethod.GET)
+    public String encontrarP() {
+        return "ejemplo-findById";
+    }
+    
 //    @RequestMapping(value = "/borrar", method = RequestMethod.GET)
 //    public String borrar() {
 //        return "redirect:/proceso";
@@ -84,7 +89,10 @@ public class EjemploController {
     
     @RequestMapping("/proceso")
 //    @RequestMapping(value = "/proceso", method = RequestMethod.GET)
-    public String procesar(Model model) {
+    public String procesar(String nombre,Model model) {
+        if (nombre != null && !nombre.trim().isEmpty()) {
+            model.addAttribute("saludo", "Hola " + nombre + "  "+"  !!!"+ "Gracias por loguearte con nosotros");
+        }
         List<Persona> personas = personaService.findAll();
         model.addAttribute("personas", personas);
 
@@ -97,13 +105,14 @@ public class EjemploController {
     @RequestMapping(value = "/guardar", method = RequestMethod.POST)
     public String crearPersona(@RequestParam("docid") String docid,
             @RequestParam("nombre") String nombre, @RequestParam("apellido") String apellido,
-            @RequestParam("edad") Integer edad, Model model) {
+            @RequestParam("edad") Integer edad, @RequestParam("fechanac") Date fechanac, Model model) {
         
         Persona per = new Persona();
         per.setDocid(docid);
         per.setNombre(nombre);
         per.setApellido(apellido);
         per.setEdad(BigInteger.valueOf(edad));
+        per.setFechanac(fechanac);
         model.addAttribute("Persona", personaService.save(per));
         
         return "redirect:/proceso";
@@ -127,12 +136,12 @@ public class EjemploController {
         
     }
     
-//    @RequestMapping("/byId")
-//    public String  encById(String docid, Model model){
-//        personaService.findById(docid);
-//        
-//        return "redirect:/proceso";
-//        
-//    }
+    @RequestMapping("{byId}")
+    public String  encById(@RequestParam(value = "docid") String docid, Model model){
+        model.addAttribute("persona", personaService.findById(docid));
+        
+        return "/ejemplo-byId";
+        
+    }
     
 }
