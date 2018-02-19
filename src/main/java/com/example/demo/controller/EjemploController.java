@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
- * @author aherreram
+ * @author David Quijano
  */
 @Controller
 public class EjemploController {
@@ -55,30 +55,7 @@ public class EjemploController {
         return "ejemplo-findById";
     }
     
-//    @RequestMapping(value = "/borrar", method = RequestMethod.GET)
-//    public String borrar() {
-//        return "redirect:/proceso";
-//    }
-////    
-//%%%%%%%%%%%%%%%%%%%%%%%%%%  PARA BUSCAR UNA LISTA DE PERSONAS UNA PERSONA   %%%%%%%%%%%%%%%%%%%%
-//    @RequestMapping("/proceso")
-//    public String procesar(String nombre, Model model) {
-//        if (nombre != null && !nombre.trim().isEmpty()) {
-//            model.addAttribute("saludo", "Hola " + nombre + "!!!");
-//        }
-//        List<Persona> valores = new ArrayList<>();
-//        
-//        for (Persona persona : valores) {
-//            LOG.log(Level.INFO, "docid = {0}", persona.getDocid());
-//            LOG.log(Level.INFO, "nombre = {0}", persona.getNombre());
-//            LOG.log(Level.INFO, "apellido = {0}", persona.getApellido());
-//            LOG.log(Level.INFO, "edad = {0}", persona.getEdad());
-//        }
-//        
-//        model.addAttribute("personas", personaService.findAll());
-//        
-//        return "ejemplo-proceso";
-//    }
+
     
      //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     //%%%%%%%%%%%%%%%%%%%%%%%%%%|OTRAFORMA PARA BUSCAR UNA LISTA DEPERSONA  |%%%%%%%%%%%%%%%%%%%%
