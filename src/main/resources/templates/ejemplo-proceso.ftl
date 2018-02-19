@@ -82,7 +82,7 @@
                                     <td>${persona.nombre}</td>
                                     <td>${persona.apellido}</td>
                                     <td>${persona.edad}</td>
-                                    <td>${persona.fechanac}</td></tr>
+                                    <td>${persona.fechanac?date}</td></tr>
         </#list>
                             </table>
 

@@ -48,7 +48,7 @@ public class Persona implements Serializable {
     private BigInteger edad;
     @Column(name = "FECHANAC")
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     private Date fechanac;
 
     public Persona() {

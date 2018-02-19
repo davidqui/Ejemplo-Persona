@@ -13,22 +13,37 @@
         
         <h1 style="text-align:center;" ><i>Ingrese los datos del usuario a guardar</i></h1>
 
-        <form action="/guardar" method="POST" >
-           <!--<tr><th>DOCID</th><th>NOMBRE</th><th>APELLIDO</th><th>EDAD</th></tr>-->
-            <p style="color:blue;"><b>&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;Ingrese    su    Id: <input title="Se necesita su numero de Documento"type="text" id="docid" name="docid" required/></b></p>
 
-            <p style="color:blue;" style="font-family:verdana;"><b>
-                Ingrese  su  Nombre:<input title="Se necesita un nombre" type="text" id="nombre" name="nombre" required/></b></p>
-            <p style="color:blue;"><b> Ingrese su Apellido:<input title="Se necesita un apellido" type="text" id="apellido" name="apellido" required/></b></p>
-            <p style="color:blue;"><b> &nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;Ingrese   su   Edad:<input title="Se necesita su edad verdadera" type="text" id="edad" name="edad" required/></b></p>
-            <p style="color:blue;"><b> &nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;Ingrese   su fecha de nacimiento:<input title="Se necesita su edad verdadera" type="date" id="fechanac" name="fechanac" required/></b></p>
-            
-            <input type="submit" value="Guardar Persona..."/>
-            </form>
+        <div class="row">
+                <div class="col">
+                    <form action="/guardar" method="POST">
+
+                        <div class="form-group">
+                            <label for="personaDocIdLabel">Documento de identidad</label>
+                            <input type="text" class="form-control" id="docid" name="docid" placeholder="Ingrese el número del documento de identidad.">
+                            </div>
+                        <div class="form-group">
+                            <label for="personaNombreLabel">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre.">
+                            </div>
+                        <div class="form-group">
+                            <label for="personaApellidoLabel">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese el apellido.">
+                            </div>
+                        <div class="form-group">
+                            <label for="personaEdadLabel">Edad</label>
+                            <input type="text" class="form-control" id="edad" name="edad" placeholder="Ingrese la edad.">
+                            </div>
+                        <div class="form-group">
+                            <label for="personaEdadLabel">Fecha Nacimiento</label>
+                            <input type="date" class="form-control" id="fechanac" name="fechanac" placeholder="Ingrese su fecha de Nacimiento.">
+                            </div>
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+
+                        </form>
+                    </div>
+                </div>
+
 
 
         </table>
